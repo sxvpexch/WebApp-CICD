@@ -7,6 +7,7 @@ data "terraform_remote_state" "network_details" {
  }
 }
 
+
 module "webserver" {
  source = "./modules/linux_node"
  ami = "ami-0c7217cdde317cfec" 
