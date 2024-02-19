@@ -1,20 +1,9 @@
-data "terraform_remote_state" "network_details" {
- backend = "s3"
- config = {
-  bucket = "student.7-khushi-bucket"
-  key = "student.7-network-state"
-  region = "us-east-1"
- }
-}
-
 resource "aws_instance" "my_vm" {
-      ami = "ami-0c7217cdde317cfec"
-      subnet_id = data.terraform_remote_state.network_details.outputs.my_subnet
-      key_name = data.terraform_remote_state.network_details.outputs.my_key
-      vpc_security_group_ids = data.terraform_remote_state.network_details.outputs.security_group_id_array
-      instance_type = "t2.micro"
-      tags = {
-             Name = "student.7-vm1"
-      }
+      ami = var.ami
+      subnet_id = var.subnet_id
+      key_name = var.instance_type
+      vpc_security_group_ids = var.vpc_security_group_ids
+      instance_type = var.instance_type
+      tags = var.tags
 }
 
