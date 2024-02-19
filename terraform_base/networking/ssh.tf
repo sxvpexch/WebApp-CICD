@@ -1,4 +1,4 @@
 resource "aws_key_pair" "vm_ssh_key" {
   key_name = "student.7-vm-key"
-  public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDqCYagor4dFBD5v8sE88jde1+suryhRpT2mjaiGFG2OOdBUFs0h5t0bkYL9h6TR28q/MAyPXRNhO7pIFOKmL1yClBOp19hENlC32SWNtbLbAkogJ7ZmBzZM3VQRcMpJqfih+gB+LX2WOqd82QGEh7JnPiJG8JpZJ4sodAlyb2LR1TZ+35qD8cf9YuilmZMWa5uDLlT0ArlmjrsZD6SLFf4JF0fuEzmH3XMOj9PoBFaApyr0JkoB+Oo/WsAzAYKtrrPMlTdEyriE1C25Vs2F9iGGhGh4ab14UH8DlRBJ7TO3XbTYYwkWDydvoR0HnkU0GDh3MfDXyuQKwbjkk4lqnnJfV0QTokVe4L4rM7PFypwKvnYk2Q/g6fZ1Diii+uvYwRkbQ/yWSaBqL9qF31HNEy70oMSsMbWqxVknId8To02cANe685UWTY3sthUb8iLXiW3UDonH9cwd1DbflIUsRL6/QBuU3ZFhGWr0KIJ1f8AFCQOHdbpdk0fr0U3OeEsGdM= arintech@arintech-ThinkCentre-M910s"
+  public_key = file("../keys/student.7-vm_key.pub")
 }
