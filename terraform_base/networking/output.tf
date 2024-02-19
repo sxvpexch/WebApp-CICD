@@ -17,3 +17,7 @@ output "my_route_table" {
 output "my_route_table_association" {
  value = aws_route_table_association.my-route-association.id
 }
+
+output "security_group_id_array" {
+ value = aws_security_group.open_ports.*.id
+}
