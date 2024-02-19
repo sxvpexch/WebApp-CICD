@@ -1,5 +1,5 @@
 resource "aws_security_group" "open_ports" {
-  name = "student.7-security-group"
+  name = var.key_name
   vpc_id = aws_vpc.main-vpc.id
   ingress {
     description = "allow ingress on port 22"
