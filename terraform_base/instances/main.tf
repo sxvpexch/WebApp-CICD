@@ -13,6 +13,7 @@ resource "aws_instance" "my_vm" {
       key_name = data.terraform_remote_state.network_details.outputs.my_key
       vpc_security_group_ids = data.terraform_remote_state.network_details.outputs.security_group_id_array
       instance_type = "t2.micro"
+      key_name = data.terraform_remote_state.network_details.outputs.my_key
       tags = {
  	     Name = "student.7-vm1"
       }
