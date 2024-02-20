@@ -10,3 +10,4 @@ variable "ami" {}
 
 variable "tags" {}
 
+variable "instance_count" {}
